@@ -646,8 +646,10 @@ function connect() {
         
 
         if (request && request.directive) {
+            adapter.log.debug('alexash3');
             alexaSH3.process(request, !alexaDisabled, callback);
         } if (request && !request.header) {
+            adapter.log.debug('custom');
             alexaCustom.process(request, !alexaDisabled, callback);
         } else {
             alexaSH2.process(request, !alexaDisabled, callback);
