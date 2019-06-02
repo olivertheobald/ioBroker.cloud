@@ -650,7 +650,7 @@ function connect() {
             alexaSH3.process(request, !alexaDisabled, callback);
         } if (request && !request.header) {
             adapter.log.debug('custom');
-            alexaCustom.process(request, !alexaDisabled, callback);
+         //   alexaCustom.process(request, !alexaDisabled, callback);
         } else {
             alexaSH2.process(request, !alexaDisabled, callback);
         }
