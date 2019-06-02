@@ -642,6 +642,9 @@ function connect() {
     socket.on('alexa', (request, callback) => {
         adapter.log.debug(new Date().getTime() + ' ALEXA: ' + JSON.stringify(request));
 
+        adapter.log.debug(request);
+        adapter.log.debug(request.directive);
+
         if (request && request.directive) {
             alexaSH3.process(request, !alexaDisabled, callback);
         } if (request && !request.header) {
