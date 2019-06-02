@@ -642,7 +642,7 @@ function connect() {
     socket.on('alexa', (request, callback) => {
         adapter.log.debug(new Date().getTime() + ' ALEXA: ' + JSON.stringify(request));
 
-        adapter.log.debug(new Date().getTime() + ' ALEXA: ' + request.directive);
+        adapter.log.debug(new Date().getTime() + ' ALEXA: ' + JSON.stringify(request.directive));
         
 
         if (request && request.directive) {
